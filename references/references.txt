@@ -1,2 +1,5 @@
 https://www.w3schools.com/html/html_css.asp
 https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b
+https://fullcircledesign.org/blog/how-to-create-a-horizontal-scrolling-component-that-loops-seamlessly/
+https://www.w3schools.com/css/css_dropdowns.asp
+https://www.w3schools.com/css/css_rwd_viewport.asp

@@ -9,8 +9,7 @@ body {
     grid-template-rows: auto 1fr auto;
     overflow-x: hidden;
   }
-  
-  
+
 footer {
     min-height: 10vh;
     background: #bbbbbb;
@@ -18,7 +17,7 @@ footer {
 
 header {
     min-height: 50px;
-    height: 16vh;
+    height: 14vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -27,14 +26,22 @@ header {
     overflow-y: hidden;
 }
 
-.nav-button {
-    margin: 10px 10px 10px 10px;
-    padding: 200px 15px 200px 15px;
-    width: 6vw;
+.general-nav {
     font-size: 1.2dvw;
     color: white;
     background-color: red;
     text-decoration: none;
+}
+
+.mobile-nav {
+    font-size: 6dvw;
+
+}
+
+.nav-button {
+    margin: 10px 10px 10px 10px;
+    padding: 200px 15px 200px 15px;
+    width: 6vw;
 }
 
 .slanted {
@@ -46,12 +53,46 @@ header {
     padding-left: calc();
 }
 
-.button-container{
+.nav-button-container{
     height: inherit;
     overflow: hidden;
     align-items: center;
     width: max-content;
     padding: 0px 2vw 0px 2vw;
+}
+
+.dropdown-button-container{
+    background-color: red;
+    width: 30vw;
+    height: inherit;
+    display: none;
+}
+
+.dropdown-manager{
+    display: none;
+    position: absolute;
+    top: 14vh;
+    background-color: white;
+    min-width: 30vw;
+    z-index: 1;
+    outline: red solid 2px;
+  }
+
+.dropdown-manager hr{
+    border-color: red;
+}
+
+.dropdown-button-container:hover .dropdown-manager{
+    display: block;
+}
+
+@media only screen and (max-width: 600px){
+    .nav-button-container{
+        display: none;
+    }
+    .dropdown-button-container{
+        display: flex;
+    }
 }
 
 .header-logo {
@@ -93,4 +134,35 @@ header {
     width: auto;
     font-size: 8vh;
     justify-self: center;
+}
+
+.words{
+    display: flex;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+.basic-borders{
+    margin: 1vh 1vw 1vh 1vw;
+}
+
+.work-container{
+    display: flex;
+    flex-direction: column;
+    width: 25dvw;
+}
+
+@keyframes popin {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(20vw);
+    }
+}
+
+.pop-up{
+    animation: popin linear normal;
+    animation-timeline: view();
+    animation-range: contain;
 }
