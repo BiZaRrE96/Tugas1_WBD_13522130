@@ -29,6 +29,7 @@ header {
     border-bottom: 10px solid red;
     width: 100vw;
     overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .general-nav {
@@ -101,11 +102,9 @@ header {
 }
 
 .bg-container{
-    height: 10px;
-    width: 10px;
-    position: absolute;
-    bottom: 35vh;
-    right: 15vw;
+    height: 0px;
+    width: 0px;
+    overflow: hidden;
 }
 
 .spinny-triangle{
@@ -113,7 +112,11 @@ header {
     height: 200px;
     width: auto;
     overflow-y: hidden;
+    overflow-x: hidden;
     opacity: 50%;
+    position: absolute;
+    bottom: 35vh;
+    left: 80vw;
 }
 
 @keyframes spin {
@@ -209,5 +212,10 @@ header {
     }
     .work-title{
         grid-column: span 1;
+    }
+    .spinny-triangle{
+        position: absolute;
+        bottom: 35vh;
+        left: 50vw;
     }
 }
