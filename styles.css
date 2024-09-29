@@ -1,9 +1,14 @@
+:root{
+    --mobile-width: 600px;
+}
+
 nav {
     display: flex;
 }
 
 body {
     min-height: 100vh;
+    width: 100%;
     margin: 0;
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -17,7 +22,7 @@ footer {
 
 header {
     min-height: 50px;
-    height: 14vh;
+    height: 20vh;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -40,7 +45,7 @@ header {
 
 .nav-button {
     margin: 10px 10px 10px 10px;
-    padding: 200px 15px 200px 15px;
+    padding: 100px 15px 100px 15px;
     width: 6vw;
 }
 
@@ -71,7 +76,7 @@ header {
 .dropdown-manager{
     display: none;
     position: absolute;
-    top: 14vh;
+    top: 10%;
     background-color: white;
     min-width: 30vw;
     z-index: 1;
@@ -86,17 +91,12 @@ header {
     display: block;
 }
 
-@media only screen and (max-width: 600px){
-    .nav-button-container{
-        display: none;
-    }
-    .dropdown-button-container{
-        display: flex;
-    }
+.main-content{
+    margin: 0 4dvw 8dvh 4dvw;
 }
 
 .header-logo {
-    height: auto;
+    width: auto;
     max-height: 20vh;
 }
 
@@ -105,7 +105,7 @@ header {
     width: 10px;
     position: absolute;
     bottom: 35vh;
-    right: 10vw;
+    right: 15vw;
 }
 
 .spinny-triangle{
@@ -129,6 +129,10 @@ header {
     margin: 2vh 2vw 2vh 2vw;
 }
 
+.big-text{
+    font-size: 5vw;
+}
+
 .main-title{
     height: 5vh;
     width: auto;
@@ -146,10 +150,23 @@ header {
     margin: 1vh 1vw 1vh 1vw;
 }
 
+/* WORKS */
+
 .work-container{
-    display: flex;
-    flex-direction: column;
-    width: 25dvw;
+    display: block;
+    width: 35dvw;
+}
+
+.work-display{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+}
+
+.work-title{
+    grid-column: span 2;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes popin {
@@ -165,4 +182,32 @@ header {
     animation: popin linear normal;
     animation-timeline: view();
     animation-range: contain;
+}
+
+@media only screen and (max-width: 600px){
+    .nav-button-container{
+        display: none;
+    }
+    .dropdown-button-container{
+        display: flex;
+    }
+    .big-text{
+        font-size: 10vw;
+    }
+    .header-logo {
+        max-width: 20vh;
+    }
+    header{
+        height: 10dvh;
+    }
+    .work-container{
+        width: 100%;
+    }
+    .work-display{
+        display: grid;
+        grid-template-columns: auto;
+    }
+    .work-title{
+        grid-column: span 1;
+    }
 }
